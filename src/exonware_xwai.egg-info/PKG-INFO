@@ -1,0 +1,103 @@
+Metadata-Version: 2.4
+Name: exonware-xwai
+Version: 0.0.1.0
+Summary: Enterprise-grade AI integration platform for the eXonware ecosystem
+Author: eXonware Backend Team
+License: MIT
+Project-URL: Homepage, https://github.com/exonware/xwai
+Project-URL: Documentation, https://github.com/exonware/xwai/docs
+Project-URL: Repository, https://github.com/exonware/xwai
+Project-URL: Issues, https://github.com/exonware/xwai/issues
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Provides-Extra: ecosystem
+Provides-Extra: lazy
+Provides-Extra: full
+Requires-Dist: cachebox; extra == "full"
+Requires-Dist: cachetools; extra == "full"
+Requires-Dist: pylru; extra == "full"
+Requires-Dist: msgspec; extra == "full"
+Requires-Dist: orjson; extra == "full"
+Requires-Dist: hyperlight_hyperjson; extra == "full"
+Requires-Dist: json5; extra == "full"
+Requires-Dist: tomli-w; extra == "full"
+Requires-Dist: xmltodict; extra == "full"
+Requires-Dist: dicttoxml; extra == "full"
+Requires-Dist: msgpack; extra == "full"
+Requires-Dist: cbor2; extra == "full"
+Requires-Dist: pymongo; extra == "full"
+Requires-Dist: brotli; extra == "full"
+Requires-Dist: zstandard; extra == "full"
+Requires-Dist: rich; extra == "full"
+Provides-Extra: openai
+Requires-Dist: openai>=1.0.0; extra == "openai"
+Provides-Extra: anthropic
+Requires-Dist: anthropic>=0.18.0; extra == "anthropic"
+Provides-Extra: google-generativeai
+Requires-Dist: google-generativeai>=0.3.0; extra == "google-generativeai"
+
+# xwai
+
+**Unified AI integration.** Single API for OpenAI, Anthropic, local LLMs; natural language commands, context management; integration with xwentity, xwstorage, xwaction, xwbots. Per project docs.
+
+*Full features and integration examples: [README_LONG.md](README_LONG.md).*
+
+**Company:** eXonware.com · **Author:** eXonware Backend Team · **Email:** connect@exonware.com  
+**Version:** See [version.py](src/exonware/xwai/version.py) or PyPI. · **Updated:** See version.py (`__date__`).
+
+[![Status](https://img.shields.io/badge/status-alpha-orange.svg)](https://exonware.com)
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
+---
+
+## Install
+
+```bash
+pip install exonware-xwai
+# Optional: [lazy] or [full]
+pip install exonware-xwai[lazy]
+pip install exonware-xwai[full]
+```
+
+---
+
+## Quick start
+
+```python
+from exonware.xwai import XWAI
+
+ai = XWAI(provider="openai", api_key="your-key")
+response = await ai.generate("What is eXonware?")
+command = await ai.interpret_command("create a user named Alice")
+```
+
+See [docs/](docs/) for ARCHITECTURE, AI_PROVIDERS, INTEGRATION, API when present.
+
+---
+
+## What you get
+
+| Area | What's in it |
+|------|----------------|
+| **Providers** | OpenAI, Anthropic, local LLMs; single interface. |
+| **NLP** | Command interpretation, message understanding. |
+| **Ecosystem** | xwentity, xwstorage, xwaction, xwbots; context management. |
+| **Security** | API key handling, rate limiting, data privacy. |
+
+---
+
+## Docs and tests
+
+- **Start:** [docs/INDEX.md](docs/INDEX.md) or [docs/](docs/).
+- **Tests:** Run from project root per project layout.
+
+---
+
+## License and links
+
+MIT — see [LICENSE](LICENSE). **Homepage:** https://exonware.com · **Repository:** https://github.com/exonware/xwai  
+
+Contributing → CONTRIBUTING.md · Security → SECURITY.md (when present).
+
+*Built with ❤️ by eXonware.com - Revolutionizing Python Development Since 2025*

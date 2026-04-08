@@ -1,0 +1,96 @@
+
+# Source size (src/*): ~51.4 KB
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "exonware-xwai"
+dynamic = ["version"]
+description = "Enterprise-grade AI integration platform for the eXonware ecosystem"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{ name = "eXonware Backend Team", email = "connect@exonware.com" }]
+maintainers = []
+keywords = []
+classifiers = []
+dependencies = [
+  "exonware-xwsystem",
+  "exonware-xwentity",
+  "exonware-xwstorage",
+  "exonware-xwaction",
+]
+
+[project.license]
+text = "Apache-2.0"
+
+[project.optional-dependencies]
+# First-party XW libs composed by this package (excludes exonware-xwsystem; see lazy/full).
+xw = [
+  "exonware-xwaction",
+  "exonware-xwentity",
+  "exonware-xwstorage",
+]
+lazy = [
+  "exonware-xwai[xw]",
+  "exonware-xwlazy",
+  "exonware-xwsystem[lazy]",
+  "exonware-xwaction[xw]",
+  "exonware-xwentity[xw]",
+  "exonware-xwstorage[xw]",
+]
+full = [
+  "exonware-xwai[xw]",
+  "exonware-xwsystem[full]",
+  "exonware-xwaction[xw]",
+  "exonware-xwentity[xw]",
+  "exonware-xwstorage[xw]",
+  "fastapi>=0.104.0",
+  "uvicorn[standard]>=0.24.0",
+  "cachebox",
+  "cachetools",
+  "pylru",
+  "msgspec",
+  "orjson",
+  "hyperlight_hyperjson",
+  "json5",
+  "tomli-w",
+  "xmltodict",
+  "dicttoxml",
+  "msgpack",
+  "cbor2",
+  "pymongo",
+  "brotli",
+  "zstandard",
+  "rich",
+  "tomli",
+  "email-validator",
+  "ujson",
+  "openai>=1.0.0",
+  "anthropic>=0.18.0",
+  "google-generativeai>=0.3.0",
+]
+dev = [
+  "exonware-xwai[full]",
+  "black>=23.0.0",
+  "isort>=5.12.0",
+  "mypy>=1.0.0",
+  "pytest>=7.0.0",
+  "pytest-asyncio>=0.21.0",
+  "pytest-cov>=4.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/exonware/xwai"
+Documentation = "https://github.com/exonware/xwai/docs"
+Repository = "https://github.com/exonware/xwai"
+Issues = "https://github.com/exonware/xwai/issues"
+
+[tool.hatch.version]
+path = "src/exonware/xwai/version.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/exonware"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/src", "/tests", "/README.md", "/.github"]

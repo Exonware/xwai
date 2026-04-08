@@ -1,0 +1,65 @@
+# Source size (src/*): ~51.4 KB
+[build-system]
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "xwai"
+dynamic = [
+    "version",
+]
+description = "Convenience wrapper for exonware-xwai - provides 'import xwai' alias"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    { name = "eXonware Backend Team", email = "connect@exonware.com" },
+]
+maintainers = []
+keywords = []
+classifiers = []
+dependencies = [
+    "exonware-xwai",
+]
+
+[project.license]
+text = "Apache-2.0"
+
+[project.optional-dependencies]
+# First-party XW libs composed by this package (excludes exonware-xwsystem; see lazy/full).
+xw = [
+    "exonware-xwai[xw]",
+]
+lazy = [
+    "exonware-xwai[lazy]",
+]
+full = [
+    "exonware-xwai[full]",
+]
+dev = [
+    "exonware-xwai[dev]",
+]
+
+[project.urls]
+Homepage = "https://github.com/exonware/xwai"
+Documentation = "https://github.com/exonware/xwai/docs"
+Repository = "https://github.com/exonware/xwai"
+Issues = "https://github.com/exonware/xwai/issues"
+
+[tool.hatch.version]
+path = "src/exonware/xwai/version.py"
+
+[tool.hatch.build.targets.wheel]
+only-include = [
+    "README.md",
+    "src/xwai_wrapper.py",
+]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src",
+    "/tests",
+    "/README.md",
+    "/.github",
+]
