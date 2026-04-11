@@ -15,36 +15,53 @@ maintainers = []
 keywords = []
 classifiers = []
 dependencies = [
-  "exonware-xwsystem",
-  "exonware-xwentity",
-  "exonware-xwstorage",
-  "exonware-xwaction",
+  "exonware-xwlazy==1.0.1.80",
+  "exonware-xwsystem==0.9.0.38",
+  "exonware-xwnode==0.9.0.24",
+  "exonware-xwjson==0.9.0.22",
+  "exonware-xwsyntax==0.6.0.26",
+  "exonware-xwquery==0.9.0.14",
+  "exonware-xwformats==0.9.0.32",
+  "exonware-xwdata==0.9.0.16",
+  "exonware-xwschema==0.4.0.11",
+  "exonware-xwaction==0.9.0.11",
+  "exonware-xwentity==0.6.0.9",
+  "exonware-xwstorage==0.0.1.7",
 ]
 
 [project.license]
 text = "Apache-2.0"
 
 [project.optional-dependencies]
-# First-party XW libs composed by this package (excludes exonware-xwsystem; see lazy/full).
+# First-party XW libs composed by this package (excludes exonware-xwsystem==0.9.0.37; see lazy/full).
 xw = [
-  "exonware-xwaction",
-  "exonware-xwentity",
-  "exonware-xwstorage",
+  "exonware-xwlazy==1.0.1.80",
+  "exonware-xwsystem==0.9.0.38",
+  "exonware-xwnode==0.9.0.24",
+  "exonware-xwjson==0.9.0.22",
+  "exonware-xwsyntax==0.6.0.26",
+  "exonware-xwquery==0.9.0.14",
+  "exonware-xwformats==0.9.0.32",
+  "exonware-xwdata==0.9.0.16",
+  "exonware-xwschema==0.4.0.11",
+  "exonware-xwaction==0.9.0.11",
+  "exonware-xwentity==0.6.0.9",
+  "exonware-xwstorage==0.0.1.7",
 ]
 lazy = [
-  "exonware-xwai[xw]",
-  "exonware-xwlazy",
-  "exonware-xwsystem[lazy]",
-  "exonware-xwaction[xw]",
-  "exonware-xwentity[xw]",
-  "exonware-xwstorage[xw]",
+  "exonware-xwai[xw]==0.0.1.3",
+  "exonware-xwlazy==1.0.1.80",
+  "exonware-xwsystem[lazy]==0.9.0.38",
+  "exonware-xwaction[xw]==0.9.0.11",
+  "exonware-xwentity[xw]==0.6.0.9",
+  "exonware-xwstorage[xw]==0.0.1.7",
 ]
 full = [
-  "exonware-xwai[xw]",
-  "exonware-xwsystem[full]",
-  "exonware-xwaction[xw]",
-  "exonware-xwentity[xw]",
-  "exonware-xwstorage[xw]",
+  "exonware-xwai[xw]==0.0.1.3",
+  "exonware-xwsystem[full]==0.9.0.38",
+  "exonware-xwaction[xw]==0.9.0.11",
+  "exonware-xwentity[xw]==0.6.0.9",
+  "exonware-xwstorage[xw]==0.0.1.7",
   "fastapi>=0.104.0",
   "uvicorn[standard]>=0.24.0",
   "cachebox",
@@ -71,7 +88,7 @@ full = [
   "google-generativeai>=0.3.0",
 ]
 dev = [
-  "exonware-xwai[full]",
+  "exonware-xwai[full]==0.0.1.3",
   "black>=23.0.0",
   "isort>=5.12.0",
   "mypy>=1.0.0",

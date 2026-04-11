@@ -38,16 +38,29 @@
 
 
 
-# Core eXonware dependencies
+# Core eXonware dependencies (install order: xwlazy → … → xwaction / entity / storage).
+# For Karizma-style stacks (xwbots/xwchat), see commented “Extended stack” below.
 
 # Source size (src/*): ~51.4 KB
-exonware-xwsystem
+exonware-xwlazy==1.0.1.80
+exonware-xwsystem==0.9.0.38
+exonware-xwnode==0.9.0.24
+exonware-xwjson==0.9.0.22
+exonware-xwsyntax==0.6.0.26
+exonware-xwquery==0.9.0.14
+exonware-xwformats==0.9.0.32
+exonware-xwdata==0.9.0.16
+exonware-xwschema==0.4.0.11
+exonware-xwaction==0.9.0.11
+exonware-xwentity==0.6.0.9
+exonware-xwstorage==0.0.1.7
 
-exonware-xwentity
-
-exonware-xwstorage
-
-exonware-xwaction
+# Extended stack (optional — e.g. bots / hosted API parity; uncomment as needed):
+# exonware-xwmodels==0.6.0.11
+# exonware-xwapi[full]==0.9.0.5
+# exonware-xwauth[full]==0.0.1.8
+# exonware-xwbots[full]==0.0.1.4
+# exonware-xwchat[full]==0.0.1.5
 
 
 
@@ -59,9 +72,9 @@ exonware-xwaction
 
 
 
-# openai>=1.0.0  # OpenAI provider support (install with: pip install exonware-xwai[full])
+# openai>=1.0.0  # OpenAI provider support (install with: pip install exonware-xwai[full]==0.0.1.2)
 
-# anthropic>=0.18.0  # Anthropic provider support (install with: pip install exonware-xwai[full])
+# anthropic>=0.18.0  # Anthropic provider support (install with: pip install exonware-xwai[full]==0.0.1.2)
 
 
 
