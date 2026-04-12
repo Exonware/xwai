@@ -26,7 +26,7 @@ dependencies = [
   "exonware-xwschema==0.4.0.12",
   "exonware-xwaction==0.9.0.12",
   "exonware-xwentity==0.6.0.11",
-  "exonware-xwstorage==0.0.1.8",
+  "exonware-xwstorage==0.0.1.9",
 ]
 
 [project.license]
@@ -46,22 +46,22 @@ xw = [
   "exonware-xwschema==0.4.0.12",
   "exonware-xwaction==0.9.0.12",
   "exonware-xwentity==0.6.0.11",
-  "exonware-xwstorage==0.0.1.8",
+  "exonware-xwstorage==0.0.1.9",
 ]
 lazy = [
-  "exonware-xwai[xw]==0.0.1.4",
+  "exonware-xwai[xw]==0.0.1.5",
   "exonware-xwlazy==1.0.1.81",
   "exonware-xwsystem[lazy]==0.9.0.39",
   "exonware-xwaction[xw]==0.9.0.12",
   "exonware-xwentity[xw]==0.6.0.11",
-  "exonware-xwstorage[xw]==0.0.1.8",
+  "exonware-xwstorage[xw]==0.0.1.9",
 ]
 full = [
-  "exonware-xwai[xw]==0.0.1.4",
+  "exonware-xwai[xw]==0.0.1.5",
   "exonware-xwsystem[full]==0.9.0.39",
   "exonware-xwaction[xw]==0.9.0.12",
   "exonware-xwentity[xw]==0.6.0.11",
-  "exonware-xwstorage[xw]==0.0.1.8",
+  "exonware-xwstorage[xw]==0.0.1.9",
   "fastapi>=0.104.0",
   "uvicorn[standard]>=0.24.0",
   "cachebox",
@@ -88,7 +88,7 @@ full = [
   "google-generativeai>=0.3.0",
 ]
 dev = [
-  "exonware-xwai[full]==0.0.1.4",
+  "exonware-xwai[full]==0.0.1.5",
   "black>=23.0.0",
   "isort>=5.12.0",
   "mypy>=1.0.0",
