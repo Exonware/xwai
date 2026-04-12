@@ -42,18 +42,18 @@
 # For Karizma-style stacks (xwbots/xwchat), see commented “Extended stack” below.
 
 # Source size (src/*): ~51.4 KB
-exonware-xwlazy==1.0.1.80
-exonware-xwsystem==0.9.0.38
-exonware-xwnode==0.9.0.24
-exonware-xwjson==0.9.0.22
-exonware-xwsyntax==0.6.0.26
-exonware-xwquery==0.9.0.14
-exonware-xwformats==0.9.0.32
-exonware-xwdata==0.9.0.16
-exonware-xwschema==0.4.0.11
-exonware-xwaction==0.9.0.11
-exonware-xwentity==0.6.0.9
-exonware-xwstorage==0.0.1.7
+exonware-xwlazy==1.0.1.81
+exonware-xwsystem==0.9.0.39
+exonware-xwnode==0.9.0.25
+exonware-xwjson==0.9.0.23
+exonware-xwsyntax==0.6.0.27
+exonware-xwquery==0.9.0.15
+exonware-xwformats==0.9.0.33
+exonware-xwdata==0.9.0.17
+exonware-xwschema==0.4.0.12
+exonware-xwaction==0.9.0.12
+exonware-xwentity==0.6.0.11
+exonware-xwstorage==0.0.1.8
 
 # Extended stack (optional — e.g. bots / hosted API parity; uncomment as needed):
 # exonware-xwmodels==0.6.0.11
