@@ -1,0 +1,1 @@
+xwai is the AI integration layer for eXonware, providing model orchestration, prompt workflows, and shared agent utilities so products can adopt LLM capabilities through stable, maintainable interfaces.

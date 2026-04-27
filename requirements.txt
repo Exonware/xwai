@@ -1,0 +1,202 @@
+# xwai Requirements
+
+# Company: eXonware.com
+
+# Author: eXonware Backend Team
+
+# Email: connect@exonware.com
+
+# Version: 0.0.1.0
+
+# Generation Date: 07-Jan-2025
+
+#
+
+# This file contains all dependencies needed for xwai
+
+# Compatible with Python 3.12+ for maximum compatibility
+
+#
+
+# Usage:
+
+#   pip install -r requirements.txt
+
+#   
+
+# For Replit and other cloud IDEs:
+
+#   Just add this file to your project root and dependencies will be auto-installed
+
+
+
+# =============================================================================
+
+# CORE DEPENDENCIES
+
+# =============================================================================
+
+
+
+# Core eXonware dependencies (install order: xwlazy → … → xwaction / entity / storage).
+# For Karizma-style stacks (xwbots/xwchat), see commented “Extended stack” below.
+
+# Source size (src/*): ~51.4 KB
+exonware-xwlazy==1.0.1.81
+exonware-xwsystem==0.9.0.39
+exonware-xwnode==0.9.0.25
+exonware-xwjson==0.9.0.23
+exonware-xwsyntax==0.6.0.27
+exonware-xwquery==0.9.0.15
+exonware-xwformats==0.9.0.33
+exonware-xwdata==0.9.0.17
+exonware-xwschema==0.4.0.12
+exonware-xwaction==0.9.0.12
+exonware-xwentity==0.6.0.11
+exonware-xwstorage==0.0.1.9
+
+# Extended stack (optional — e.g. bots / hosted API parity; uncomment as needed):
+# exonware-xwmodels==0.6.0.11
+# exonware-xwapi[full]==0.9.0.5
+# exonware-xwauth[full]==0.0.1.8
+# exonware-xwbots[full]==0.0.1.4
+# exonware-xwchat[full]==0.0.1.5
+
+
+
+# =============================================================================
+
+# OPTIONAL DEPENDENCIES (Install with [full] extra)
+
+# =============================================================================
+
+
+
+# openai>=1.0.0  # OpenAI provider support (install with: pip install exonware-xwai[full]==0.0.1.2)
+
+# anthropic>=0.18.0  # Anthropic provider support (install with: pip install exonware-xwai[full]==0.0.1.2)
+
+
+
+# =============================================================================
+
+# DEVELOPMENT AND TESTING DEPENDENCIES
+
+# =============================================================================
+
+
+
+# Testing Framework
+
+pytest>=7.0.0                       # Testing framework
+
+pytest-cov>=4.0.0                   # Coverage reporting
+
+pytest-asyncio>=0.20.0              # Async testing support
+
+
+
+# Code Quality
+
+black>=22.0.0                       # Code formatting
+
+isort>=5.10.0                       # Import sorting
+
+flake8>=4.0.0                       # Linting
+
+
+
+# Type Checking
+
+mypy>=0.950                          # Static type checking
+
+
+
+# =============================================================================
+
+# COMPATIBILITY NOTES
+
+# =============================================================================
+
+#
+
+# Python Version Compatibility:
+
+# - Minimum: Python 3.12 (as per pyproject.toml)
+
+# - Recommended: Python 3.12+ for best compatibility
+
+# - Tested: Python 3.12, 3.13
+
+#
+
+# Platform Compatibility:
+
+# - Windows: Full support
+
+# - Linux: Full support  
+
+# - macOS: Full support
+
+#
+
+# Cloud IDE Support:
+
+# - Replit: ✅ Full support
+
+# - GitHub Codespaces: ✅ Full support  
+
+# - GitPod: ✅ Full support
+
+# - Google Colab: ✅ Full support
+
+# - Jupyter: ✅ Full support
+
+#
+
+# =============================================================================
+
+# INSTALLATION VERIFICATION
+
+# =============================================================================
+
+#
+
+# After installing requirements, verify with:
+
+#   python -c "from exonware.xwai import *; print('✅ xwai loaded!')"
+
+#
+
+# Or run comprehensive verification:
+
+#   python tests/verify_installation.py
+
+#
+
+# Expected output:
+
+#   🎉 SUCCESS! exonware.xwai is ready to use!
+
+
+
+cachebox
+cachetools
+pylru
+msgspec
+orjson
+hyperlight_hyperjson
+json5
+tomli-w
+xmltodict
+dicttoxml
+msgpack
+cbor2
+pymongo
+brotli
+zstandard
+rich
+tomli
+email-validator
+ujson
+google

@@ -1,0 +1,113 @@
+
+# Source size (src/*): ~51.4 KB
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "exonware-xwai"
+dynamic = ["version"]
+description = "Enterprise-grade AI integration platform for the eXonware ecosystem"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{ name = "eXonware Backend Team", email = "connect@exonware.com" }]
+maintainers = []
+keywords = []
+classifiers = []
+dependencies = [
+  "exonware-xwlazy==1.0.1.81",
+  "exonware-xwsystem==0.9.0.39",
+  "exonware-xwnode==0.9.0.25",
+  "exonware-xwjson==0.9.0.23",
+  "exonware-xwsyntax==0.6.0.27",
+  "exonware-xwquery==0.9.0.15",
+  "exonware-xwformats==0.9.0.33",
+  "exonware-xwdata==0.9.0.17",
+  "exonware-xwschema==0.4.0.12",
+  "exonware-xwaction==0.9.0.12",
+  "exonware-xwentity==0.6.0.11",
+  "exonware-xwstorage==0.0.1.9",
+]
+
+[project.license]
+text = "Apache-2.0"
+
+[project.optional-dependencies]
+# First-party XW libs composed by this package (excludes exonware-xwsystem==0.9.0.37; see lazy/full).
+xw = [
+  "exonware-xwlazy==1.0.1.81",
+  "exonware-xwsystem==0.9.0.39",
+  "exonware-xwnode==0.9.0.25",
+  "exonware-xwjson==0.9.0.23",
+  "exonware-xwsyntax==0.6.0.27",
+  "exonware-xwquery==0.9.0.15",
+  "exonware-xwformats==0.9.0.33",
+  "exonware-xwdata==0.9.0.17",
+  "exonware-xwschema==0.4.0.12",
+  "exonware-xwaction==0.9.0.12",
+  "exonware-xwentity==0.6.0.11",
+  "exonware-xwstorage==0.0.1.9",
+]
+lazy = [
+  "exonware-xwai[xw]==0.0.1.5",
+  "exonware-xwlazy==1.0.1.81",
+  "exonware-xwsystem[lazy]==0.9.0.39",
+  "exonware-xwaction[xw]==0.9.0.12",
+  "exonware-xwentity[xw]==0.6.0.11",
+  "exonware-xwstorage[xw]==0.0.1.9",
+]
+full = [
+  "exonware-xwai[xw]==0.0.1.5",
+  "exonware-xwsystem[full]==0.9.0.39",
+  "exonware-xwaction[xw]==0.9.0.12",
+  "exonware-xwentity[xw]==0.6.0.11",
+  "exonware-xwstorage[xw]==0.0.1.9",
+  "fastapi>=0.104.0",
+  "uvicorn[standard]>=0.24.0",
+  "cachebox",
+  "cachetools",
+  "pylru",
+  "msgspec",
+  "orjson",
+  "hyperlight_hyperjson",
+  "json5",
+  "tomli-w",
+  "xmltodict",
+  "dicttoxml",
+  "msgpack",
+  "cbor2",
+  "pymongo",
+  "brotli",
+  "zstandard",
+  "rich",
+  "tomli",
+  "email-validator",
+  "ujson",
+  "openai>=1.0.0",
+  "anthropic>=0.18.0",
+  "google-generativeai>=0.3.0",
+]
+dev = [
+  "exonware-xwai[full]==0.0.1.5",
+  "black>=23.0.0",
+  "isort>=5.12.0",
+  "mypy>=1.0.0",
+  "pytest>=7.0.0",
+  "pytest-asyncio>=0.21.0",
+  "pytest-cov>=4.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/exonware/xwai"
+Documentation = "https://github.com/exonware/xwai/docs"
+Repository = "https://github.com/exonware/xwai"
+Issues = "https://github.com/exonware/xwai/issues"
+
+[tool.hatch.version]
+path = "src/exonware/xwai/version.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/exonware"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/src", "/tests", "/README.md", "/.github"]
